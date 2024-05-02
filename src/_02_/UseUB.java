@@ -1,7 +1,7 @@
 package _02_;
 
 import _01_.UserBook;
-
+// 0501 UserBook사용
 public class UseUB {
     public static void main(String[] args) {
         UserBook ub = new UserBook();
