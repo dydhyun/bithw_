@@ -5,13 +5,14 @@ import java.util.Arrays;
 public class ArrayUtility2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] a = new int[3];
+		int[] a = new int[4];
 		int[] b = new int[3];
 		a[0] = 4;
 		a[1] = 4;
-		a[2] = 4;	
+		a[2] = 4;
+		a[3] = 6;
 		
-		b[0] = 2;
+		b[0] = 4;
 		b[1] = 5;
 		b[2] = 7;
 		System.out.println(Arrays.toString(remove(a,b)));
@@ -49,6 +50,11 @@ public class ArrayUtility2 {
 			
 			if(cnt >= s2.length) {
 				newArr[i] = s1[i];
+			}
+		}
+		for(int i = 0; i < newArr.length; i++) {
+			if(newArr[i] == 0) {
+				
 			}
 		}
 		

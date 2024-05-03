@@ -17,14 +17,14 @@ class Max3 {
 		int max = a;
 		
 		
-		if(max > b) {
+		if(max >= b) {
 			max = max;
 		}
 		else {
 			max = b;
 		}
 		
-		if(max > c) {
+		if(max >= c) {
 			max = max;
 		}
 		else {
