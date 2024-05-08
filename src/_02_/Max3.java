@@ -32,5 +32,7 @@ class Max3 {
 		}
 
 		System.out.println("최댓값은 " + max + "입니다.");
+		stdIn.close();
 	}
+	
 }

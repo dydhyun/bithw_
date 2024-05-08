@@ -19,6 +19,7 @@ public class StrChecking {
 		Drainage dr = new Drainage();
 		System.out.println(dr.Drain(str));
 		
+		sc.close();
 		
 	}
 
