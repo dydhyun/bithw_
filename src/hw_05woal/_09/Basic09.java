@@ -29,13 +29,16 @@ public class Basic09 {
 	 * */	
 	public static void changeDay() {
 		Calendar c = Calendar.getInstance();
-		c.set(2024, 4, 8);
-		System.out.println(c.get(c.YEAR) + "년 " 
-				+ c.get(c.MONTH) + "월 " + c.get(c.DATE) + "일");
+		c.set(2024, 3, 8);
+		System.out.println(c.get(Calendar.YEAR) + "년 " 
+				+ (c.get(Calendar.MONTH ) + 1) + "월 " + c.get(Calendar.DATE) + "일");
 		
-		c.add(Calendar.DATE, 365*5 + 30*2 + 3);
-		System.out.println(c.get(c.YEAR) + "년 " 
-				+ c.get(c.MONTH) + "월 " + c.get(c.DATE) + "일");
+//		c.add(Calendar.DATE, 365*5 + 30*2 + 3);
+		c.add(Calendar.YEAR, 5);
+		c.add(Calendar.MONTH, 2);
+		c.add(Calendar.DATE, 3);
+		System.out.println(c.get(Calendar.YEAR) + "년 " 
+				+ (c.get(Calendar.MONTH ) + 1) + "월 " + c.get(Calendar.DATE) + "일");
 		
 	}
 	
@@ -47,19 +50,28 @@ public class Basic09 {
 	 * */
 	public static void printDay() {
 		Calendar c = Calendar.getInstance();
-		StringBuilder sb = new StringBuilder();
+//		StringBuilder sb = new StringBuilder();
+//		
+//		
+//		System.out.println(sb.append(c.get(Calendar.YEAR)).append("-")
+//				.append((c.get(Calendar.MONTH) + 1)  < 10 ? "0" + (c.get(Calendar.MONTH) + 1) : (c.get(Calendar.MONTH) + 1))
+//				.append("-")
+//				.append(c.get(Calendar.DATE) < 10 ? "0" + c.get(Calendar.DATE) : c.get(Calendar.DATE)));
+//		
+		String formattedDate = String.format("%04d-%02d-%02d", 
+                c.get(Calendar.YEAR), 
+                c.get(Calendar.MONTH) + 1, 
+                c.get(Calendar.DATE));
+		System.out.println(formattedDate);
+
 		
 		
-		System.out.println(sb.append(c.get(Calendar.YEAR)).append("-")
-				.append(c.get(Calendar.MONTH) < 10 ? "0" + c.get(Calendar.MONTH) : c.get(Calendar.MONTH))
-				.append("-")
-				.append(c.get(Calendar.DATE) < 10 ? "0" + c.get(Calendar.DATE) : c.get(Calendar.DATE)));
+//		Date day = new Date();
 		
-		
-		Date day = new Date();
-		
-		SimpleDateFormat sdf = new SimpleDateFormat("yy년 MM일 dd일");
-		System.out.println(sdf.format(day));
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초");
+//		System.out.println(sdf.format(day));
+        System.out.println(sdf.format(c.getTime()));
+
 		
 	}
 	
