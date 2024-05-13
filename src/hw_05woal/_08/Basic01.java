@@ -33,7 +33,7 @@ public class Basic01 {
 	public static void hellO() {
 		StringBuffer sb = new StringBuffer(30);
 		sb.append("hello");
-//		sb.setLength(30);
+		sb.setLength(30);
 		int leng = sb.capacity()- sb.length();
 		System.out.println(sb.length());
 		System.out.println(sb.capacity());
@@ -44,7 +44,7 @@ public class Basic01 {
 			sb.append('a');
 		}
 		System.out.println(sb);
-//		System.out.println(sb.toString().replaceAll(" ", "a"));
+		System.out.println(sb.toString().replaceAll("\0", "a"));
 	}
 	
 
