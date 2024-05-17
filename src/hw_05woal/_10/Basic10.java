@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package hw_05woal._10;
 
 import java.util.HashMap;
@@ -82,15 +81,5 @@ public class Basic10 {
 
 
 }
-=======
-package hw_05woal._10;
 
-public class Basic10 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
-}
->>>>>>> 3860299d9bdc5d296253ef038e6c8614b3a4a766
