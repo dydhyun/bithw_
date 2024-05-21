@@ -1,9 +1,7 @@
 package hw_05woal._19;
 
 import java.io.StringBufferInputStream;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Sun_1 {
@@ -28,6 +26,12 @@ public class Sun_1 {
 
         String my_String = "a1B2c3D4e5F6g7";
         System.out.println(solu.solutionConvert(my_String));
+
+        System.out.println(solu.oddEvenSum(num_list));
+
+        int[] findmi = {4,5,6,7,88,8,9,0};
+        System.out.println(Arrays.toString(solu.solutionArrayMaxIndex(findmi)));
+
     }
 
 
@@ -138,4 +142,20 @@ public class Sun_1 {
         }
         return sb.toString();
     }
+    public int oddEvenSum(int[] intArr){
+        int even = Arrays.stream(intArr).filter(n -> n % 2 ==0).sum();
+        System.out.println("evenSum: " + even);
+        int odd = Arrays.stream(intArr).filter(n -> n % 2 ==1).sum();
+        System.out.println("oddSum: " + odd);
+        return even+odd;
+    }
+    public int[] solutionArrayMaxIndex(int[] array) {
+        int a = Arrays.stream(array).max().orElse(-1);
+        int b = IntStream.range(0, array.length)
+                    .filter(i -> array[i] == a)
+                .findFirst().orElse(-1);
+        return new int[] {a,b};
+    }
+
+
 }
